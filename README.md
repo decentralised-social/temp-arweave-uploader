@@ -2,11 +2,6 @@
 
 An example of uploading large files on ARWeave with `arweave-js` and Node v15+. Uses `arweave-streams-tx` to stream files and get around 2GB NodeJS limit.
 
-### Current issues:
-
-* `uploadTransactionAsync` never uploads file when run on localhost, running with standard `while (!uploader.isComplete) await uploader.uploadChunk()` by running `UPLOAD_PROGRESS=yes yarn upload` works on localhost.
-* MOST IMPORTANTLY: If you run with a real wallet in live ARWeave network, neither upload method work, either `uploadTransactionAsync` or `while (!uploader.isComplete) await uploader.uploadChunk()`.
-
 ### Install deps
 
 1. `yarn install`

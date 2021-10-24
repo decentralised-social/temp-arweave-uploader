@@ -70,7 +70,7 @@ const main = async () => {
     console.log('Upload with uploadTransactionAsync from arweave-streams-tx...')
     try {
       start = Date.now()
-      await pipeline(createReadStream(filePath), uploadTransactionAsync(tx, arweave, false))
+      await pipeline(createReadStream(filePath), uploadTransactionAsync(tx, arweave))
       console.log(`uploadTransactionAsync took ${Date.now() - start}ms`)
       openUpload(tx.id)
     } catch (e) {
